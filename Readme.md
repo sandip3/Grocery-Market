@@ -26,21 +26,11 @@ python3 -m venv venv
 source venv/bin/activate  # On Windows/Ubuntu use `venv\Scripts\activate`
 ```
 
-
 ### Step 3: Install Flask and Required Dependencies
-
 ```bash
-pip install Flask
-pip install Flask-SQLAlchemy
-pip install Flask-WTF
-pip install WTForms
-pip install email-validator
-pip install Flask-Bcrypt
-pip install Flask-Login
-pip install pyautogui pyperclip
+pip install Flask Flask-SQLAlchemy Flask-WTF WTForms email-validator Flask-Bcrypt Flask-Login pyautogui pyperclip
 ```
 or 
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -57,6 +47,11 @@ python app.py
 - **Username**: sandip
 - **Password**: sandip
 
+- **Username**: user1
+- **Password**: password1
+
+You can also create a new account to log in and explore the features, including buying and selling grocery items.
+
 ### Managing Grocery Items
 - **Add New Item**: Easily add new grocery items with details such as name, price, and quantity.
 - **Update Item**: Modify existing grocery item details as needed.
@@ -66,28 +61,35 @@ python app.py
 ### Automation Tools
 - **PyAutoGUI & Pyperclip**: Automate repetitive tasks like copying and pasting text, navigating through the app, and more.
 
+## Deployment 🌐
+
+- **Live Demo**: [Grocery Market on Render](https://grocery-market.onrender.com/)
+- **GitHub Repository**: [Grocery Market on GitHub](https://github.com/sandip3/Grocery-Market)
+
 ## Dependencies 📦
-- `Flask` - Web framework
-- `Flask-SQLAlchemy` - Database ORM
-- `Flask-WTF` - Form handling and validation
-- `WTForms` - Form handling and validation
-- `email-validator` - Email validation for forms
-- `Flask-Bcrypt` - Password hashing
-- `Flask-Login` - User session management
-- `pyautogui` - Automation tool for GUI tasks
-- `pyperclip` - Cross-platform clipboard module
+
+- `Flask==3.0.3` - Web framework
+- `Flask-SQLAlchemy==3.1.1` - Database ORM
+- `Flask-WTF==1.2.1` - Form handling and validation
+- `WTForms==3.1.2` - Form handling and validation
+- `email-validator==2.2.0` - Email validation for forms
+- `Flask-Bcrypt==1.0.1` - Password hashing
+- `Flask-Login==0.6.3` - User session management
+- `pyautogui==0.9.54` - Automation tool for GUI tasks
+- `pyperclip==1.9.0` - Cross-platform clipboard module
+- `gunicorn==23.0.0` - For serving the app with multithreading on platforms like Render
 
 ## Folder Structure 📂
 ```plaintext
 Grocery-Market/
-├── instance
+├── instance/
 │   └── market.db
 ├── Market/
-│   ├── static
-│   │   └── img
+│   ├── static/
+│   │   └── img/
 │   │       └── Logo.png
 │   ├── templates/
-│   │   ├── includes
+│   │   ├── includes/
 │   │   │   ├── item.html
 │   │   │   └── owned_item_model.html
 │   │   ├── base.html
@@ -95,15 +97,12 @@ Grocery-Market/
 │   │   ├── login.html
 │   │   ├── market.html
 │   │   └── register.html
-│   ├── static/
-│   │   ├── main.css
-│   │   └── images/
 │   ├── __init__.py
 │   ├── forms.py
 │   ├── models.py
 │   └── routes.py
 │
-├── .venv
+├── .venv/
 ├── Procfile
 ├── Readme.md
 ├── requirements.txt
@@ -119,6 +118,3 @@ This project is open-source and licensed under the MIT License. Contributions ar
 - **Open-Source Community**: For various tools and libraries that made this project possible.
 
 ---
-
-
-"pip install gunicorn" = For seveing mutithreding yout app in `Render` it use 'Procfile'
