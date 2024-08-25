@@ -1,16 +1,22 @@
 # Grocery Market [Flask] 🛒
 
 ## Overview 📋
-**Grocery Market** is a web-based application designed to simplify the management of grocery items for small to medium-sized businesses. 
-- Built with Flask, this application allows users to securely log in, manage their inventory, and track grocery items with ease.
+**Grocery Market** is a web-based application developed using the Flask framework. It is designed to simplify the management of grocery items for small to medium-sized businesses. The application offers secure user authentication, efficient product management, and robust database integration, making it an ideal solution for inventory management.
+
+## Technical Stack 🛠️
+- **Frontend**: HTML, CSS, Flask-WTF for form handling.
+- **Backend**: Python, Flask, Flask-SQLAlchemy for ORM, Flask-Login for user session management.
+- **Database**: SQLite (with Flask-SQLAlchemy).
+- **Automation Tools**: PyAutoGUI, Pyperclip.
+- **Deployment**: Render, Gunicorn for server.
 
 ## Features ✨
-- **User Authentication**: Secure user login and registration system powered by Flask-Login and Flask-Bcrypt.
-- **Product Management**: Add, update, delete, and view grocery items through a user-friendly interface.
-- **Database Integration**: Efficient data storage and retrieval using Flask-SQLAlchemy.
+- **User Authentication**: Secure login and registration system with Flask-Login and Flask-Bcrypt.
+- **Product Management**: Ability to add, update, delete, and view grocery items through an intuitive interface.
+- **Database Integration**: Manage data storage and retrieval with Flask-SQLAlchemy.
 - **Form Validation**: Robust form handling and validation using Flask-WTF and WTForms.
-- **Responsive Design**: Accessible across various devices with a clean and intuitive layout.
-- **Automation Tools**: Includes support for automation with `pyautogui` and `pyperclip` for enhanced user interactions.
+- **Automation Support**: Incorporates PyAutoGUI and Pyperclip for enhanced user interactions.
+- **Responsive Design**: Accessible on various devices with a clean, user-friendly layout.
 
 ## Installation 🛠️
 
