@@ -1,0 +1,72 @@
+<style>
+    .modal-content {
+        background: #212121;
+    }
+
+</style>
+
+<!-- More Info -->
+<div class="modal fade" id="Modal-MoreInfo-{{ item.id }}" tabindex="-1" aria-labelledby="exampleModelLable"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLable">
+                    <!-- Here Gose Title -->
+                    Name : {{ item.name }}
+                </h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span style="color: white;" aria-hidden="true">
+                        x
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- here Goes txt/paragraph -->
+                {{ item.description }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Purchase Confirm -->
+<div class="modal fade" id="Modal-PurchaseConfirm-{{ item.id }}" tabindex="-1" aria-labelledby="exampleModelLable"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLable">
+                    <!-- Here Gose Title -->
+                    Name : {{ item.name }}
+                </h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span style="color: white;" aria-hidden="true">
+                        x
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- here Goes txt/paragraph -->
+                <form method="POST">
+                    {{ purchase_form.hidden_tag() }}
+
+                    <h3 class="text-center">Are you sure you want to Buy {{ item.name }} for {{ item.price }}₹ ?</h3>
+                    <br>
+
+                    <h6 class="text-center mb-4">By clicking Purchase, you will purchase this item. </h6>
+
+                    <input id="purchase_item" name="purchase_item" type="hidden" value="{{ item.name }}">
+                    {{purchase_form.submit(class= "btn btn-outline-success btn-block")}}
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
