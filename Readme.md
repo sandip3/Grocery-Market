@@ -121,5 +121,5 @@ This project is open-source and licensed under the MIT License. Contributions ar
 ---
 
 
-"pip install gunicorn" = For seveing mutithreding yout app in heruku it use 'Procfile'
-'Procfile' = used by heruku for deploying app
+"pip install gunicorn" = For seveing mutithreding yout app in `Render` it use 'Procfile'
+
