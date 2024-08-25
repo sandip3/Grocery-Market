@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ### Step 4: Run the Application
 ```bash
-python run.py
+python app.py
 ```
 - Access the application by navigating to `http://127.0.0.1:5000` in your web browser.
 
@@ -107,7 +107,7 @@ Grocery-Market/
 ├── Procfile
 ├── Readme.md
 ├── requirements.txt
-└── run.py
+└── app.py
 ```
 
 ## Licensing 📜
@@ -122,4 +122,3 @@ This project is open-source and licensed under the MIT License. Contributions ar
 
 
 "pip install gunicorn" = For seveing mutithreding yout app in `Render` it use 'Procfile'
-
